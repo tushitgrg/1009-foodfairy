@@ -1,0 +1,7 @@
+Flask
+werkzeug.utils
+requests
+os
+openai
+flask_sqlalchemy
+telebot
