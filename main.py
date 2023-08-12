@@ -6,7 +6,7 @@ import openai
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-openai.api_key = "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"
+openai.api_key = "Add Your Open AI Key."
 app.secret_key = "1234"
 app.config['UPLOAD_FOLDER'] = "static"
 
