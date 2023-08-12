@@ -8,7 +8,7 @@ from telebot import types
 
 openai.api_key = "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"
 API_KEY = "16af4ee752174c5d8556899af9a643db"
-Token = "6461048124:AAHlFGlnV8vpDzrVehFbu_NbgXAvMtuXu_8"
+Token = "Add Your Bot Token Here"
 bot = telebot.TeleBot(Token)
 
 
