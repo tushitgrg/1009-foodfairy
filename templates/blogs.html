@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {color: #36C;}
+
+a:hover {color: #06F;}
+
+body {
+	background: #4E5D3C url(static/bg.jpg);
+	color: #444;
+	font: normal 62.5% "Lucida Sans Unicode",sans-serif;
+	margin: 0;
+}
+
+p,blockquote,ul {margin-bottom: 1.2em;}
+
+h1 {font: normal 1.6em serif;}
+
+h2 {
+	font: bold 1em Verdana,serif;
+	margin: 3px 0 1px;
+}
+
+ul {margin-left: 1.8em;}
+
+blockquote {
+	background: url(static/quote.gif) no-repeat;
+	color: #555;
+	font: normal 1.4em serif;
+	padding-left: 22px;
+}
+
+blockquote p {padding: 6px;}
+
+
+.clearer {clear: both;}
+
+.left {float: left;}
+
+.right {float: right;}
+
+img.left {margin: 0 18px 6px 0;}
+
+.divider {
+	background: url(static/divider.gif) no-repeat;
+	height: 20px;
+	margin: 24px 0;
+}
+
+
+.container {
+	background: url(static/bgcontainer.jpg) repeat-y center top;
+	margin: 0 auto;
+	width: 736px;
+}
+
+.gfx {
+	background: url(static/gfx.jpg) no-repeat;
+	float: left;
+	height: 140px;
+	margin-top: 12px;
+	width: 52px;
+}
+
+.top {
+	background: url(static/bgcontent.gif) no-repeat 0 -4%;
+	float: left;
+	text-align: center;
+	width: 632px;
+}
+
+.header {
+	background: #56644A url(static/fairy.jpeg) no-repeat right center;
+  background-size:30%;
+	color: #FFC;
+	font-size: 1.4em;
+	height: 232px;
+  padding-right:100px;
+	
+}
+
+.header h1 {
+	font: normal 3.2em serif,sans-serif;
+	padding: 62px 0 34px 0;
+}
+
+.pattern {
+	background: #334127 url(static/pattern.gif) repeat-x;
+	clear: both;
+	height: 12px;
+}
+
+
+.navigation {margin: 0 24px;}
+
+.navigation a {
+	color: #6C7151;
+	font: normal 1.9em serif;
+	line-height: 50px;
+	margin: 0 16px;
+	text-decoration: none;
+}
+.navigation a:hover,.navigation #selected {
+	color: #2C3111;
+}
+
+
+.content {
+	background: url(static/bgcontent.gif) no-repeat;
+	clear: both;
+	font-size: 1.2em;
+	margin: 0 52px;
+	padding: 0 38px 12px;
+}
+.content .spacer {
+	height: 42px;
+}
+
+
+.item {clear: both;}
+
+.item img {border: 1px dashed #8A6;}
+
+.item .title {
+	color: #445044;
+	font: normal 2em serif;
+}
+
+.item .title:first-letter {
+	display: block;
+	float: left;
+	font-size: 2.4em;
+}
+
+.item .metadata {
+	color: #666;
+	font-size: 0.9em;
+	float: left;
+	padding: 0 0 6px 4px;
+}
+
+.item .body {
+	clear: both;
+}
+
+
+.footer {
+	background: url(static/bgfooter.gif) no-repeat;
+	color: #666;
+	font-size: 1.1em;
+	line-height: 41px; 
+	margin: 0 auto;
+	text-align: center;
+	width: 632px;
+}
+
+.footer a {
+	color: #666;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+input{
+  font-size: 18px;
+}
+
+input[type="text"] {
+    width: 400px;
+  height:30px;
+}
+
+
+#preloader{
+  background: #000000 url(static/preloader.gif) no-repeat center center;
+  background-size:30%;
+  height:100%;
+  width:100%;
+  position:fixed;
+  z-index:1000000000;
+  top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+  display:none;
+}
+    
+
+    
+  </style>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+
+<title>Food Fairy</title>
+</head>
+<body>
+  
+<div class="container">
+  <div class="gfx"><span></span></div>
+  <div class="top">
+
+    <div class="pattern"><span></span></div>
+    <div class="header">
+      <h1>Food Fairy</h1>
+      <p>Prototype Project by Tushit Garg</p>
+    </div>
+    <div class="pattern"><span></span></div>
+  </div>
+  <div class="content">
+    <div class="spacer"></div>
+    <div class="item">
+      <div class="title">Create New Blog</div>
+    
+      <div class="body">
+   
+       
+        <form action="/subblogs" method="POST" enctype="multipart/form-data" id="frm">
+  
+ 
+
+  
+   
+   
+
+ 
+   <input type="text" name="query" placeholder="Enter Blog Title" required />
+     <br><br>
+          <input type="text" name="uname" placeholder="Enter Your Name" required />
+    <br><br>
+ 
+<textarea  name="blogdata" rows="15" cols="50" required>
+Write Blog here
+</textarea>
+
+ 
+
+ 
+  
+ 
+ 
+ 
+<br>
+<input type="submit" value="Submit" id="subbut">
+
+
+
+    </form>
+        
+      </div>
+    </div>
+    <div class="divider"><span></span></div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Sno.</th>
+      <th scope="col">Blog Title</th>
+      <th scope="col">By User</th>
+      <th scope="col">View</th> 
+ 
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for blog in blogss %}
+   
+    <tr>
+      <th scope="row">{{loop.index}}</th>
+      <td>{{blog.blogtitle}}</td>
+      <td>{{blog.username}}</td>
+      
+      <td><a class="btn btn-primary" href="/{{blog.id}}" role="button">Read</a></td>
+      
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+
+    
+</body>
+</html>
