@@ -6,7 +6,7 @@ import openai
 from telebot import types
 
 
-openai.api_key = "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"
+openai.api_key = "Add Your Open AI key!"
 API_KEY = "16af4ee752174c5d8556899af9a643db"
 Token = "Add Your Bot Token Here"
 bot = telebot.TeleBot(Token)
